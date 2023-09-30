@@ -58,15 +58,29 @@ position = Vector2(77, 301)
 [node name="Ball" parent="." instance=ExtResource("2_g2n7v")]
 position = Vector2(590, 187)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(1133, 323)
-scale = Vector2(1.73576, 32.5462)
+[node name="LeftWall" type="StaticBody2D" parent="."]
+position = Vector2(1150, 325)
+scale = Vector2(-0.753836, 30.2426)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftWall"]
 shape = SubResource("RectangleShape2D_0seki")
 
-[node name="ColorRect" type="ColorRect" parent="StaticBody2D"]
+[node name="ColorRect" type="ColorRect" parent="LeftWall"]
 offset_left = -10.0
 offset_top = -10.0
 offset_right = 10.0
 offset_bottom = 10.0
+
+[node name="DeathWall" type="StaticBody2D" parent="."]
+position = Vector2(6, 325)
+scale = Vector2(-0.753836, 30.2426)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathWall"]
+shape = SubResource("RectangleShape2D_0seki")
+
+[node name="ColorRect" type="ColorRect" parent="DeathWall"]
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+color = Color(0.815686, 0.0862745, 0, 1)
