@@ -24,9 +24,9 @@ func _process(delta):
 
 func _on_area_2d_body_entered(body):
 	
-	#if is_in_group("Player"):
-	print("lemao")
-	dir = -dir
-	"""elif is_in_group("Death"):
+	if body.is_in_group("Player") or body.is_in_group("Wall"):
+		print("lemao")
+		dir = -dir
+	elif body.is_in_group("Death"):
 		print("death")
-		position = spawnPos"""
+		self.position = spawnPos
