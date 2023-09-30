@@ -23,10 +23,10 @@ func _process(delta):
 	#print(dir)
 
 func _on_area_2d_body_entered(body):
-	print("hhahaha")
-	if is_in_group("Player"):
-		print("lemao")
-		dir = -dir
-	elif is_in_group("Death"):
+	
+	#if is_in_group("Player"):
+	print("lemao")
+	dir = -dir
+	"""elif is_in_group("Death"):
 		print("death")
-		position = spawnPos
+		position = spawnPos"""
