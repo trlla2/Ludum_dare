@@ -7,7 +7,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_rorgx"]
 radius = 24.0208
 
-[node name="Ball" type="Node2D"]
+[node name="Ball" type="Node2D" groups=["Ball"]]
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
 gravity_scale = 0.0

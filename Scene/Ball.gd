@@ -7,7 +7,7 @@ extends RigidBody2D
 
 var speed = 300
 var dir = -1
-
+var spawnPos = Vector2(576,324)
 
 #dibujar la BOla
 func _draw() -> void:
@@ -17,13 +17,16 @@ func _draw() -> void:
 func _ready() -> void: 
 	linear_velocity.x = speed * dir
 
-
+			
 func _process(delta):
 	linear_velocity.x = speed * dir 
-	print(dir)
-
-
+	#print(dir)
 
 func _on_area_2d_body_entered(body):
-	dir = -dir
-	print("rebota")
+	print("hhahaha")
+	if is_in_group("Player"):
+		print("lemao")
+		dir = -dir
+	elif is_in_group("Death"):
+		print("death")
+		position = spawnPos

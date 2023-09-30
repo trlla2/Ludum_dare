@@ -71,8 +71,8 @@ offset_top = -10.0
 offset_right = 10.0
 offset_bottom = 10.0
 
-[node name="DeathWall" type="StaticBody2D" parent="."]
-position = Vector2(6, 325)
+[node name="DeathWall" type="StaticBody2D" parent="." groups=["Death"]]
+position = Vector2(7.00024, 325)
 scale = Vector2(-0.753836, 30.2426)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeathWall"]
@@ -83,4 +83,4 @@ offset_left = -10.0
 offset_top = -10.0
 offset_right = 10.0
 offset_bottom = 10.0
-color = Color(0.815686, 0.0862745, 0, 1)
+color = Color(1, 0.0705882, 0, 1)
