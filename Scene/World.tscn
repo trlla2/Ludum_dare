@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://blq1m0t6ttsu7"]
+[gd_scene load_steps=5 format=3 uid="uid://blq1m0t6ttsu7"]
 
 [ext_resource type="PackedScene" uid="uid://crxe22pgrams2" path="res://Scene/player.tscn" id="1_irmk1"]
 [ext_resource type="PackedScene" uid="uid://bxm7nlyi1dhlg" path="res://Scene/ball.tscn" id="2_g2n7v"]
@@ -6,10 +6,14 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kiqt0"]
 size = Vector2(1154, 20)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0seki"]
+
 [node name="lvl" type="Node2D"]
 
 [node name="UpWall" type="StaticBody2D" parent="."]
 position = Vector2(576, 12)
+collision_layer = 9
+collision_mask = 9
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="UpWall"]
 position = Vector2(3, 1)
@@ -24,6 +28,8 @@ offset_bottom = 11.0
 
 [node name="DownWall" type="StaticBody2D" parent="."]
 position = Vector2(578, 638)
+collision_layer = 9
+collision_mask = 9
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DownWall"]
 position = Vector2(-1, -1)
@@ -51,3 +57,16 @@ position = Vector2(77, 301)
 
 [node name="Ball" parent="." instance=ExtResource("2_g2n7v")]
 position = Vector2(590, 187)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(1133, 323)
+scale = Vector2(1.73576, 32.5462)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_0seki")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D"]
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
