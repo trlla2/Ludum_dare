@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://blq1m0t6ttsu7"]
+[gd_scene load_steps=6 format=3 uid="uid://blq1m0t6ttsu7"]
 
 [ext_resource type="PackedScene" uid="uid://crxe22pgrams2" path="res://Scene/player.tscn" id="1_irmk1"]
+[ext_resource type="Script" path="res://Scene/Timer.gd" id="1_w7t5q"]
 [ext_resource type="PackedScene" uid="uid://bxm7nlyi1dhlg" path="res://Scene/ball.tscn" id="2_g2n7v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kiqt0"]
@@ -51,6 +52,7 @@ theme_override_font_sizes/font_size = 30
 text = "0"
 horizontal_alignment = 1
 vertical_alignment = 1
+script = ExtResource("1_w7t5q")
 
 [node name="Player" parent="." groups=["Player"] instance=ExtResource("1_irmk1")]
 position = Vector2(77, 301)
@@ -58,6 +60,7 @@ scale = Vector2(0.561169, 1.02804)
 
 [node name="Ball" parent="." groups=["ball"] instance=ExtResource("2_g2n7v")]
 position = Vector2(590, 187)
+scale = Vector2(1, 1.0118)
 
 [node name="LeftWall" type="StaticBody2D" parent="." groups=["Player", "left_wall"]]
 position = Vector2(1150, 325)
