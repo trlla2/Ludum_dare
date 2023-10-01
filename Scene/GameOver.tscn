@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://bsv30pirw1krx"]
+
+[ext_resource type="Script" path="res://Scene/GameOver.gd" id="1_8qivw"]
+
+[node name="GameOver" type="Node2D"]
+script = ExtResource("1_8qivw")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_left = -122.0
+offset_top = -39.0
+offset_right = 122.0
+offset_bottom = 62.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.0588235, 0, 1)
+theme_override_font_sizes/font_size = 45
+text = "Game Over"
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Quit"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Button" to="." method="_on_button_quit_pressed"]
