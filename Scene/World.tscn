@@ -53,10 +53,10 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Player" parent="." groups=["Player"] instance=ExtResource("1_irmk1")]
-visible = false
 position = Vector2(77, 301)
+scale = Vector2(0.561169, 1.02804)
 
-[node name="Ball" parent="." instance=ExtResource("2_g2n7v")]
+[node name="Ball" parent="." groups=["ball"] instance=ExtResource("2_g2n7v")]
 position = Vector2(590, 187)
 
 [node name="LeftWall" type="StaticBody2D" parent="." groups=["Player", "left_wall"]]
