@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bxm7nlyi1dhlg"]
+[gd_scene load_steps=5 format=3 uid="uid://bxm7nlyi1dhlg"]
 
 [ext_resource type="Script" path="res://Scene/Ball.gd" id="1_2dbfv"]
+[ext_resource type="AudioStream" uid="uid://clcjgxw05f28p" path="res://audio/blipSelect.wav" id="2_py2nj"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_a28o5"]
 
@@ -22,6 +23,9 @@ collision_mask = 8
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="RigidBody2D/Area2D"]
 shape = SubResource("CircleShape2D_rorgx")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="RigidBody2D"]
+stream = ExtResource("2_py2nj")
 
 [connection signal="body_entered" from="RigidBody2D" to="RigidBody2D" method="_on_body_entered"]
 [connection signal="body_entered" from="RigidBody2D/Area2D" to="RigidBody2D" method="_on_area_2d_body_entered"]
