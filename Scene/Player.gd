@@ -4,6 +4,9 @@ const speed = 300.0
 var direction
 
 
+
+
+
 func _physics_process(delta):
 	direction = get_axis("ui_up", "ui_down")
 	
